@@ -23,25 +23,27 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Normalize
-# Typography
-# Elements
-# Forms
-# Navigation
-	## Links
-	## Menus
-# Accessibility
-# Alignments
-# Clearings
-# Widgets
-# Content
-	## Posts and pages
-	## Asides
-	## Comments
-# Infinite scroll
-# Media
-	## Captions
-	## Galleries
+	1.	# Normalize
+			# Typography
+			# Elements
+			# Forms
+			# Navigation
+				## Links
+				## Menus
+			# Accessibility
+			# Alignments
+			# Clearings
+			# Widgets
+			# Content
+				## Posts and pages
+				## Asides
+				## Comments
+			# Infinite scroll
+			# Media
+				## Captions
+				## Galleries
+
+	2.
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
@@ -924,3 +926,7 @@ object {
 .gallery-caption {
 	display: block;
 }
+
+/*--------------------------------------------------------------
+2
+--------------------------------------------------------------*/

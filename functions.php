@@ -114,6 +114,10 @@ add_action( 'widgets_init', 'ceej_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ceej_scripts() {
+	wp_enqueue_style( 'ceej-bootstrap-style', ceej_get_file( '/bootstrap/css/bootstrap.min.css'), array(), '3.3.6');
+
+	wp_enqueue_script( 'ceej-bootstrap-script', ceej_get_file('/bootstrap/js/bootstrap.min.js'), array(), '3.3.6', true );
+
 	wp_enqueue_style( 'ceej-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'ceej-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
@@ -150,3 +154,19 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Get file function.
+ */
+ function ceej_get_file($file) {
+ 		$file_parts = pathinfo($file);
+ 		$accepted_ext = array('jpg','img','png','css','js');
+ 		if( in_array($file_parts['extension'], $accepted_ext) ){
+ 			$file_path = get_stylesheet_directory() . $file;
+ 			if ( file_exists( $file_path ) ){
+ 				return esc_url(get_stylesheet_directory_uri() . $file);
+ 			} else {
+ 				return esc_url(get_template_directory_uri() . $file);
+ 			}
+ 	 	}
+  }
